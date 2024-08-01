@@ -9,6 +9,8 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.ChunkingFilter;
 import net.dv8tion.jda.api.utils.MemberCachePolicy;
 
+import java.util.Objects;
+
 /**
  * Hello world!
  */
@@ -19,7 +21,9 @@ public class App {
         //User namedUser = new User(18, "Yasmine", "ADEKALOM");
         System.out.println(u.age());
         User fluentUser = new User().age(27).prenom("Yanis").nom("ADEKALOM");
-        JDA jda = startBot("", new BotListener());
+        //String token = Objects.requireNonNull(args[0]);
+        String token = Objects.toString(args[0], "token");
+        JDA jda = startBot(token, new BotListener());
     }
 
     public static JDA startBot(String token, ListenerAdapter adapter) {
