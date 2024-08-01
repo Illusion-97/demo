@@ -1,6 +1,6 @@
 package fr.dawan.models;
 
-import lombok.*;
+import lombok.Data;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
